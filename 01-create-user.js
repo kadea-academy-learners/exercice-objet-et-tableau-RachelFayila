@@ -1,6 +1,6 @@
 /*
 Écrire une fonction "createUser" qui permet de créer un utilisateur.
-
+ 
 La fonction doit accepter trois paramètres :
     - nom (string) : le nom de l'utilisateur
     - age (number) : l'âge de l'utilisateur
@@ -12,9 +12,22 @@ La fonction doit retourner un objet contenant ces trois propriétés :
     - estConnecte (boolean)
 */
 
-function createUser() {
+function createUser(nom, age, estConnecte) {
+    return {
+    nom: nom,
+    age: age,
+    estConnecte: estConnecte
+  };
     
 }
+const utilisateurs = [
+  createUser("Rachel", 2, true),
+  createUser("Henock", 30, false),
+  createUser("Candide", 98, true),
+];
+
+
+console.log(utilisateurs);
 
 module.exports = {
     createUser,
